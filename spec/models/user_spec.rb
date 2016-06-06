@@ -62,23 +62,14 @@ describe User do
     it { should_not be_valid }
   end
 
-  describe "when password is not present" do
-    before do
-      @user = User.new(name: "Example User", email: "user@example.com",
-                       password: " ", password_confirmation: " ")
-    end
-    it { should_not be_valid }
-  end
+  
 
   describe "when password doesn't match confirmation" do
     before { @user.password_confirmation = "mismatch" }
     it { should_not be_valid }
   end
 
-  describe "with a password that's too short" do
-    before { @user.password = @user.password_confirmation = "a" * 5 }
-    it { should be_invalid }
-  end
+  
 
   describe "return value of authenticate method" do
     before { @user.save }

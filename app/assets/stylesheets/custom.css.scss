@@ -116,9 +116,6 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
-   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 /* sidebar */
@@ -200,7 +197,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 20%;
+  width: 100%;
   align: "middle";
   margin-bottom: 15px;
   @include box_sizing;
@@ -302,8 +299,4 @@ span.picture {
     border: 0;
   }
 }
-
-
-
-
 
